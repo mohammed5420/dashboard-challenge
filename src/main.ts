@@ -1,17 +1,7 @@
 import './style.css'
 
-const navLinks = document.querySelectorAll('.side-nav-dashboard-link');
-
-navLinks.forEach(link => {
-  link.addEventListener('click', () => {
-    navLinks.forEach(link => link.classList.remove('active'));
-    link.classList.add('active');
-  });
-});
-
-// the same code above but on mouse enter and remove on mouse leave also keep track of the active link before hovering
+// Adding active class to the hovered link and removing it from the rest
 const NavLinks = document.querySelectorAll('.side-nav-dashboard-link');
-
 NavLinks.forEach(link => {
   link.addEventListener('mouseenter', () => {
     link.classList.add('active');
@@ -21,6 +11,8 @@ NavLinks.forEach(link => {
   });
 });
 
+
+// Donut chart data
 const DonutSlice = [{
   id: 1,
   percent: 30,
@@ -42,7 +34,6 @@ const DonutSlice = [{
 ];
 
 const circlecontainer = document.getElementById('circlecontainer') as Element;
-// const output = document.getElementById('output');
 
 circlecontainer.innerHTML = DonutSlice.map((item, i, arr) => {
   let offset = 3 * i + arr.filter((_item, j) => j < i)

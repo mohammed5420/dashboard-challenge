@@ -33,7 +33,7 @@
 
 
 .list-item {
-  @apply flex p-3 rounded-md cursor-pointer transition items-center justify-between;
+  @apply flex flex-col sm:flex-row p-3 gap-3 rounded-md cursor-pointer transition sm:items-center sm:justify-between;
 }
 
 .slice {
