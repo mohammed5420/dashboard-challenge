@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.side-nav-dashboard-link {
+  @apply relative flex items-center justify-center rounded-md text-lg font-semibold text-accent md:text-base hover:text-accent transition-all cursor-pointer;
+}
+
+.side-nav-link {
+  @apply relative flex items-center justify-center rounded-md text-lg font-semibold border border-light-blue text-accent md:text-base hover:text-accent transition-all cursor-pointer p-2 hover:bg-slate-900;
+}
+
+.active {
+  @apply after:content-[''] after:absolute after:w-1 after:h-8 after:-left-4 after:rounded-sm after:bg-red-500;
+}
+
+.active-menu {
+  @apply absolute flex right-3 left-auto bottom-auto top-16 z-50 w-16 flex-col border-none border-light-blue bg-background;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+  /* adjust to your desired background color */
+  position: relative;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5),
+    inset 0 0 10px rgba(0, 0, 0, 0.2);
+  animation: pulse 1.5s ease-in-out infinite alternate;
+}
+
+
+.list-item {
+  @apply flex p-3 rounded-md cursor-pointer transition items-center justify-between;
+}
+
+.slice {
+  stroke-linecap: round;
+  stroke-width: 1.5;
+  fill: none;
+  box-shadow: 0 8px 25px 0 #e5e5e5;
+}

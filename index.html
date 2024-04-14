@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+  <link rel="stylesheet" href="/dist/style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+    rel="stylesheet">
+  <title>Dashboard Challenge</title>
+</head>
+
+<body class="bg-light-blue">
+  <div id="app" class="flex min-h-screen w-full flex-col bg-background">
+    <aside class="fixed inset-y-0 hidden sm:flex left-0 z-10 w-16 flex-col border-r border-light-blue bg-background">
+      <nav class="flex flex-col items-center gap-4 py-5">
+        <div class="mb-8 border border-light-blue bg-mid-blue rounded-md p-2">
+          <a href="#"
+            class="group flex h-9 w-9 shrink-0 items-center justify-center gap-2 rounded-md bg-primary text-lg font-semibold text-accent md:h-8 md:w-8 md:text-base">
+            <img src="/logo.svg" alt="Home" />
+          </a>
+        </div>
+        <div class="flex gap-8 flex-col items-center w-full">
+          <a href="/#" class="side-nav-dashboard-link">
+            <i data-lucide="search" class="text-light-gray"></i>
+          </a>
+          <a href="/#" class="side-nav-dashboard-link">
+            <i data-lucide="bar-chart-3" class="text-light-gray"></i>
+          </a>
+          <a href="/#" class="side-nav-dashboard-link">
+            <i data-lucide="triangle-alert" class="text-light-gray"></i>
+          </a>
+          <a href="/#" class="side-nav-dashboard-link">
+            <i data-lucide="globe" class="text-light-gray"></i>
+          </a>
+          <a href="/#" class="side-nav-dashboard-link">
+            <i data-lucide="layers-2" class="text-light-gray"></i>
+          </a>
+        </div>
+      </nav>
+    </aside>
+    <header class="fixed w-full bg-background">
+      <div class="flex items-center justify-between px-4 py-3">
+        <div class="flex items-center justify-end w-full gap-4">
+          <a href="/#" class="side-nav-link">
+            <i data-lucide="circle-help" class="text-light-gray"></i>
+          </a>
+          <a href="/#" class="side-nav-link">
+            <i data-lucide="settings" class="text-light-gray"></i>
+          </a>
+          <a href="/#" class="side-nav-link">
+            <i data-lucide="user-round" class="text-light-gray"></i>
+          </a>
+          <button class="sm:hidden side-nav-link open-menu-btn">
+            <i data-lucide="menu" class="text-light-gray"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main class="ml-0 sm:ml-20 p-4 text-white">
+      <div class="flex flex-col gap-4 mt-12 mb-4">
+        <div class="flex items-center justify-between">
+          <h1 class="text-2xl font-semibold">Dashboard</h1>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+        <div class="rounded-lg p-3 bg-mid-blue">
+          <div class="flex items-center justify-between mb-10">
+            <h2 class="text-lg font-semibold text-light-gray">Risk score</h2>
+            <button
+              class="bg-mid-blue rounded-md border border-light-blue p-2 px-4 text-light-gray transition hover:bg-light-blue hover:text-white">
+              View all risks
+            </button>
+          </div>
+          <div class="flex items-center justify-around">
+            <div
+              class="relative w-[20rem] h-[20rem] flex items-center justify-center rounded-full bg-light-blue group transition-all shadow-3xl hover:shadow-4xl">
+              <div class="w-[19rem] h-[19rem] flex items-center justify-center rounded-full bg-background">
+                <div class="w-[18rem] h-[18rem] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                  <svg xmlns="http//www.w3.org/2000/svg" viewBox="0 0 40 40" id="svg">
+                    <g id="circlecontainer" transform="rotate(-90 20 20)"></g>
+                  </svg>
+                  <p id="output"></p>
+                </div>
+                <div
+                  class="relative z-20 w-[16rem] h-[16rem] flex items-center justify-center rounded-full bg-mid-blue">
+                  <div
+                    class="w-[15rem] rounded-full h-[15rem] border border-dashed border-light-gray flex flex-col items-center justify-center">
+                    <p class="text-4xl text-white font-black">F</p>
+                    <p class="text-lg text-light-gray">Very high risk</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-col gap-6">
+              <div class="flex items-center gap-6">
+                <div class="w-3 h-3 bg-accent ring-8 ring-opacity-5 ring-accent rounded-full"></div>
+                <div>
+                  <h3 class="text-sm font-semibold text-light-gray">Critical</h3>
+                  <p class="text-4xl text-white font-black">7</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-6">
+                <div class="w-3 h-3 bg-orange ring-8 ring-opacity-5 ring-orange rounded-full"></div>
+                <div>
+                  <h3 class="text-sm font-semibold text-light-gray">High</h3>
+                  <p class="text-4xl text-white font-black">8</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-6">
+                <div class="w-3 h-3 bg-yellow ring-8 ring-opacity-5 ring-yellow rounded-full"></div>
+                <div>
+                  <h3 class="text-sm font-semibold text-light-gray">Medium</h3>
+                  <p class="text-2xl text-white font-black">10</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="rounded-lg bg-mid-blue">
+          <div class="flex p-3 items-center justify-between mb-0">
+            <h2 class="text-lg font-semibold text-light-gray">Unresolved risks</h2>
+            <button
+              class="bg-mid-blue rounded-md border border-light-blue p-2 px-4 text-light-gray transition hover:bg-light-blue hover:text-white">
+              View all risks
+            </button>
+          </div>
+          <div class="flex flex-col gap-0">
+            <div class="list-item hover:bg-accent hover:bg-opacity-5">
+              <div class="flex gap-3 items-center">
+                <div class="w-10 h-10 flex items-center justify-center rounded-md bg-accent bg-opacity-10">
+                  <img src="/icons/risk-red.svg" alt="list-item red icon" class="w-6 h-6" />
+                </div>
+                <div>
+                  <h3 class="">VNC daemon doesn't enforce Security Type</h3>
+                  <p class="text-light-gray text-sm">On www.example.io</p>
+                </div>
+              </div>
+              <div>
+                <p class="text-sm text-light-gray">Open for 88 days</p>
+              </div>
+            </div>
+            <div class="list-item hover:bg-accent hover:bg-opacity-5">
+              <div class="flex gap-3 items-center">
+                <div class="w-10 h-10 flex items-center justify-center rounded-md bg-accent bg-opacity-10">
+                  <img src="/icons/risk-red.svg" alt="list-item red icon" class="w-6 h-6" />
+                </div>
+                <div>
+                  <h3 class="">Jira - [CVE-2019-8451] Unauthenticated Server-side request f...</h3>
+                  <p class="text-light-gray text-sm">On www.example.io</p>
+                </div>
+              </div>
+              <div>
+                <p class="text-sm text-light-gray">Open for 45 days</p>
+              </div>
+            </div>
+            <div class="list-item hover:bg-orange hover:bg-opacity-5">
+              <div class="flex gap-3 items-center">
+                <div class="w-10 h-10 flex items-center justify-center rounded-md bg-orange bg-opacity-10">
+                  <img src="/icons/risk-orange.svg" alt="list-item orange icon" class="w-6 h-6" />
+                </div>
+                <div>
+                  <h3 class="">VNC daemon doesn't enforce Security Type</h3>
+                  <p class="text-light-gray text-sm">On www.example.io</p>
+                </div>
+              </div>
+              <div>
+                <p class="text-sm text-light-gray">Open for 16 days</p>
+              </div>
+            </div>
+            <div class="list-item hover:bg-orange hover:bg-opacity-5">
+              <div class="flex gap-3 items-center">
+                <div class="w-10 h-10 flex items-center justify-center rounded-md bg-orange bg-opacity-10">
+                  <img src="/icons/risk-orange.svg" alt="list-item orange icon" class="w-6 h-6" />
+                </div>
+                <div>
+                  <h3 class="">Exposed Elasticsearch Vulnerability in Elastic Stack</h3>
+                  <p class="text-light-gray text-sm">On 18.192.0.120</p>
+                </div>
+              </div>
+              <div>
+                <p class="text-sm text-light-gray">Open for 16 days</p>
+              </div>
+            </div>
+            <div class="list-item hover:bg-yellow hover:bg-opacity-5">
+              <div class="flex gap-3 items-center">
+                <div
+                  class="w-10 h-10 flex items-center justify-center transition hover:bg-opacity-15 rounded-md bg-yellow bg-opacity-10">
+                  <img src="/icons/risk-yellow.svg" alt="list-item yellow icon" class="w-6 h-6" />
+                </div>
+                <div>
+                  <h3 class="cursor-pointer">IIS Tilde Enumeration</h3>
+                  <p class="text-light-gray text-sm">On careers.example.com</p>
+                </div>
+              </div>
+              <div>
+                <p class="text-sm text-light-gray">Open for 8 days</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="rounded-lg p-3 bg-mid-blue"
+          style="background-image: url('/icons/discovery.png'); background-size: 100%;">
+          <div class="flex w-full h-full items-end justify-between mb-10">
+            <div class="flex flex-col gap-6">
+              <div>
+                <h3 class="text-sm font-semibold text-light-gray">Assets</h3>
+                <p class="text-4xl text-white font-black">88</p>
+              </div>
+              <div>
+                <h3 class="text-sm font-semibold text-light-gray">Domains</h3>
+                <p class="text-4xl text-white font-black">104</p>
+              </div>
+              <div>
+                <h3 class="text-sm font-semibold text-light-gray">IPs</h3>
+                <p class="text-4xl text-white font-black">263</p>
+              </div>
+            </div>
+            <button
+              class="flex items-center justify-center gap-2 bg-mid-blue rounded-md border border-light-blue p-2 px-4 text-light-gray transition hover:bg-light-blue hover:text-white">
+              View assets graph <i data-lucide="arrow-right" class="text-light-gray hover:text-white"></i>
+            </button>
+          </div>
+        </div>
+        <div class=" rounded-lg p-0 bg-mid-blue">
+          <div class="flex items-center justify-between p-3">
+            <h2 class="text-lg font-semibold text-light-gray">New domains</h2>
+            <button
+              class="bg-mid-blue rounded-md border border-light-blue p-2 px-4 text-light-gray transition hover:bg-light-blue hover:text-white">
+              View all domains
+            </button>
+          </div>
+          <div class="flex flex-col gap-0">
+            <div class="list-item hover:bg-cyan-500 hover:bg-opacity-5">
+              <div class="flex gap-3 items-center">
+                <div class="w-10 h-10 flex items-center justify-center rounded-md bg-cyan-500 bg-opacity-10">
+                  <i data-lucide="globe" class="text-cyan-500"></i>
+                </div>
+                <div>
+                  <h3 class="">access.example.io</h3>
+                  <p class="text-light-gray text-sm">Services: 80/http, 443/https</p>
+                </div>
+              </div>
+              <div>
+                <p class="text-sm text-light-gray">Today</p>
+              </div>
+            </div>
+            <div class="list-item hover:bg-cyan-500 hover:bg-opacity-5">
+              <div class="flex gap-3 items-center">
+                <div class="w-10 h-10 flex items-center justify-center rounded-md bg-cyan-500 bg-opacity-10">
+                  <i data-lucide="globe" class="text-cyan-500"></i>
+                </div>
+                <div>
+                  <h3 class="">account.example.io</h3>
+                  <p class="text-light-gray text-sm">Services: 80/http</p>
+                </div>
+              </div>
+              <div>
+                <p class="text-sm text-light-gray">May 23</p>
+              </div>
+            </div>
+            <div class="list-item hover:bg-cyan-500 hover:bg-opacity-5">
+              <div class="flex gap-3 items-center">
+                <div class="w-10 h-10 flex items-center justify-center rounded-md bg-cyan-500 bg-opacity-10">
+                  <i data-lucide="globe" class="text-cyan-500"></i>
+                </div>
+                <div>
+                  <h3 class="">dev.example.io</h3>
+                  <p class="text-light-gray text-sm">443/https</p>
+                </div>
+              </div>
+              <div>
+                <p class="text-sm text-light-gray">May 11</p>
+              </div>
+            </div>
+            <div class="list-item hover:bg-cyan-500 hover:bg-opacity-5">
+              <div class="flex gap-3 items-center">
+                <div class="w-10 h-10 flex items-center justify-center rounded-md bg-cyan-500 bg-opacity-10">
+                  <i data-lucide="globe" class="text-cyan-500"></i>
+                </div>
+                <div>
+                  <h3 class="">www.example.io</h3>
+                  <p class="text-light-gray text-sm">Services: 80/http, 443/https, 8443/http</p>
+                </div>
+              </div>
+              <div>
+                <p class="text-sm text-light-gray">May 11</p>
+              </div>
+            </div>
+            <div class="list-item hover:bg-cyan-500 hover:bg-opacity-5">
+              <div class="flex gap-3 items-center">
+                <div class="w-10 h-10 flex items-center justify-center rounded-md bg-cyan-500 bg-opacity-10">
+                  <i data-lucide="globe" class="text-cyan-500"></i>
+                </div>
+                <div>
+                  <h3 class="">test.example.io</h3>
+                  <p class="text-light-gray text-sm">9447/latte</p>
+                </div>
+              </div>
+              <div>
+                <p class="text-sm text-light-gray">8 Jan</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script type="module" src="/src/main.ts"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+
+</html>
